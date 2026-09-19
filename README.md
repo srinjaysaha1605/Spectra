@@ -189,22 +189,7 @@ Importantly, **feature importance is treated as predictive signal, not causality
 
 ---
 
-### `07 / AI INTERPRETATION`
-
-Only after the analytical report exists does Gemini enter the pipeline.
-
-The AI receives the computed evidence and explains:
-
-- What the findings mean
-- Which patterns are notable
-- How different findings relate
-- What deserves further investigation
-
-The AI layer is therefore an **interpretation layer**, not the analytical foundation.
-
----
-
-# `04` — LARGE DATASETS
+# LARGE DATASETS
 
 SPECTRA is designed to remain practical beyond small demo datasets.
 
@@ -226,7 +211,7 @@ This prevents the scope of an analysis from being hidden from the user.
 
 ---
 
-# `05` — WHAT CAN IT HELP WITH?
+# WHAT CAN IT HELP WITH?
 
 SPECTRA is useful when you have a dataset but don't yet have a clear understanding of what is inside it.
 
