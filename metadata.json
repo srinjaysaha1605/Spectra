@@ -1,0 +1,6 @@
+{
+  "name": "SPECTRA",
+  "description": "A refined, intelligent exploration experience for uploaded datasets.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

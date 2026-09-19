@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Cinzel', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #080807;
+    color: #e8e3d5;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-serif);
+  }
+}
+
+/* Hide all scrollbars globally across all browsers while keeping scroll functionality */
+html, body, #root, *, *::before, *::after {
+  -ms-overflow-style: none !important; /* IE and Edge */
+  scrollbar-width: none !important; /* Firefox */
+}
+
+html::-webkit-scrollbar, body::-webkit-scrollbar, #root::-webkit-scrollbar, *::-webkit-scrollbar {
+  display: none !important; /* Chrome, Safari and Opera */
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* Hide scrollbars completely utility */
+.no-scrollbar {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* Subtle dark paper grain background overlay */
+.bg-spectra-grain {
+  background-color: #080807;
+  background-image: radial-gradient(circle at 50% 50%, rgba(232, 227, 213, 0.03) 0%, rgba(8, 8, 7, 0.95) 70%),
+    radial-gradient(circle at 80% 20%, rgba(200, 169, 98, 0.02) 0%, transparent 40%);
+}
+
+/* Celestial hair lines */
+.celestial-line {
+  border-color: rgba(232, 227, 213, 0.08);
+}
+
+.celestial-glow {
+  box-shadow: 0 0 40px rgba(232, 227, 213, 0.06);
+}

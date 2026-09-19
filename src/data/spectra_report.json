@@ -1,0 +1,74 @@
+{
+  "dataset": {
+    "rows": 100,
+    "cols": 5,
+    "columns": 5,
+    "feature_names": ["sensor_alpha", "sensor_beta", "vibration_hz", "thermal_gradient", "pressure_kpa"],
+    "column_names": ["sensor_alpha", "sensor_beta", "vibration_hz", "thermal_gradient", "pressure_kpa"],
+    "numerical_columns": ["sensor_alpha", "sensor_beta", "vibration_hz", "thermal_gradient", "pressure_kpa"],
+    "numerical_cols": ["sensor_alpha", "sensor_beta", "vibration_hz", "thermal_gradient", "pressure_kpa"],
+    "categorical_columns": [],
+    "categorical_cols": [],
+    "missing_values_count": {
+      "sensor_alpha": 0,
+      "sensor_beta": 0,
+      "vibration_hz": 0,
+      "thermal_gradient": 0,
+      "pressure_kpa": 0
+    },
+    "summary_stats": {
+      "sensor_alpha": { "mean": 15.2, "std": 3.8, "min": 10.1, "q25": 12.5, "median": 14.8, "q75": 17.2, "max": 29.4 },
+      "sensor_beta": { "mean": 104.5, "std": 12.1, "min": 98.2, "q25": 100.1, "median": 102.8, "q75": 106.0, "max": 148.0 }
+    }
+  },
+  "discoveries": [
+    {
+      "id": "disc_1",
+      "title": "Strong Linear Alignment",
+      "insight": "High positive correlation detected between sensor_alpha and thermal_gradient (r = 0.92).",
+      "significance": "high",
+      "metric": "r = 0.92"
+    }
+  ],
+  "relationships": {
+    "correlation_matrix": {
+      "sensor_alpha": { "sensor_alpha": 1.0, "sensor_beta": 0.85, "vibration_hz": 0.78 },
+      "sensor_beta": { "sensor_alpha": 0.85, "sensor_beta": 1.0, "vibration_hz": 0.81 }
+    },
+    "top_correlations": [
+      { "feature_a": "sensor_alpha", "feature_b": "thermal_gradient", "correlation": 0.92 }
+    ]
+  },
+  "structure": {
+    "explained_variance_ratio": [0.65, 0.22],
+    "cumulative_variance": [0.65, 0.87],
+    "loadings": {
+      "sensor_alpha": { "pc1": 0.48, "pc2": -0.12 },
+      "sensor_beta": { "pc1": 0.45, "pc2": 0.25 }
+    },
+    "pca_points": [
+      { "pc1": 1.2, "pc2": -0.5, "index": 0 },
+      { "pc1": -0.8, "pc2": 0.3, "index": 1 }
+    ]
+  },
+  "clusters": {
+    "num_clusters": 3,
+    "inertia": 124.5,
+    "points": [
+      { "pc1": 1.2, "pc2": -0.5, "cluster": 0, "index": 0 },
+      { "pc1": -0.8, "pc2": 0.3, "cluster": 1, "index": 1 }
+    ],
+    "cluster_summaries": [
+      { "cluster_id": 0, "count": 45, "percentage": 45.0, "center": { "pc1": 1.1, "pc2": -0.4 } },
+      { "cluster_id": 1, "count": 55, "percentage": 55.0, "center": { "pc1": -0.9, "pc2": 0.2 } }
+    ]
+  },
+  "anomalies": {
+    "total_anomalies": 4,
+    "anomaly_percentage": 4.0,
+    "points": [
+      { "index": 3, "score": -0.28, "is_anomaly": true, "values": { "sensor_alpha": 28.9, "sensor_beta": 145.2 } }
+    ]
+  },
+  "predictive_signal": null
+}
