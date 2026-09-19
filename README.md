@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <strong>SEE THE STRUCTURE. MEASURE THE EVIDENCE.</strong>
+  <strong>THE UNSEEN HAS A SHAPE.</strong>
 </p>
 
 <p align="center">
